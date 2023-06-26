@@ -1,0 +1,10 @@
+{
+  "name": "nodejs-getting-started-with-node-and-express",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Getting started with Node and Express!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
