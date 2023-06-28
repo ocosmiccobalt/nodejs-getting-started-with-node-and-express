@@ -30,4 +30,21 @@ app.post('/store-user', (req, res) => {
   res.send('<h1>Username stored!</h1>');
 });
 
+app.get('/users', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'users.json');
+
+  const fileData = fs.readFileSync(filePath);
+  const existingUsers = JSON.parse(fileData);
+
+  let responseData = '<ul>';
+
+  for (const user of existingUsers) {
+    responseData += '<li>' + user + '</li>';
+  }
+
+  responseData += '</ul>';
+
+  res.send(existingUsers);
+});
+
 app.listen(3000);
