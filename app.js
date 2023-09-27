@@ -44,7 +44,7 @@ app.get('/users', (req, res) => {
 
   responseData += '</ul>';
 
-  res.send(existingUsers);
+  res.send(responseData);
 });
 
 app.listen(3000);
